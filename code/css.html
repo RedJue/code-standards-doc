@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CSS | AlphaFlow前端文档规范</title>
+    <meta name="description" content="代码书写规范、组件编写规范、版本迭代整合">
+    
+    
+    <link rel="preload" href="/code-standards-doc/assets/css/0.styles.327fa1f6.css" as="style"><link rel="preload" href="/code-standards-doc/assets/js/app.e95fd164.js" as="script"><link rel="preload" href="/code-standards-doc/assets/js/5.0a479782.js" as="script"><link rel="prefetch" href="/code-standards-doc/assets/js/10.0a15d52f.js"><link rel="prefetch" href="/code-standards-doc/assets/js/11.53996055.js"><link rel="prefetch" href="/code-standards-doc/assets/js/12.7ba505f8.js"><link rel="prefetch" href="/code-standards-doc/assets/js/13.5eff4944.js"><link rel="prefetch" href="/code-standards-doc/assets/js/14.bdc2f95c.js"><link rel="prefetch" href="/code-standards-doc/assets/js/15.5b148bc0.js"><link rel="prefetch" href="/code-standards-doc/assets/js/2.3d48e83c.js"><link rel="prefetch" href="/code-standards-doc/assets/js/3.932c000a.js"><link rel="prefetch" href="/code-standards-doc/assets/js/4.0dfa2ce7.js"><link rel="prefetch" href="/code-standards-doc/assets/js/6.cc83384c.js"><link rel="prefetch" href="/code-standards-doc/assets/js/7.ee2ef2e4.js"><link rel="prefetch" href="/code-standards-doc/assets/js/8.97a79676.js"><link rel="prefetch" href="/code-standards-doc/assets/js/9.f5087740.js">
+    <link rel="stylesheet" href="/code-standards-doc/assets/css/0.styles.327fa1f6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/code-standards-doc/" class="home-link router-link-active"><!----> <span class="site-name">AlphaFlow前端文档规范</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/code-standards-doc/home/update.html" class="nav-link">首页</a></div><div class="nav-item"><a href="/code-standards-doc/name/" class="nav-link">命名规范</a></div><div class="nav-item"><a href="/code-standards-doc/code/" class="nav-link router-link-active">代码规范</a></div><div class="nav-item"><a href="/code-standards-doc/component/" class="nav-link">组件编写规范</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">仓库地址</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://gitlab.econage.com/af-front/AlphaFlow" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  alphaflow1.x
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://gitlab.econage.com/af-front/AlphaFlow-Mobile" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  alphaflow-mobile1.x
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://gitlab.econage.com/af-front-bit/AlphaFlow-pc-beta" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  alphaflow2.x-beta
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://gitlab.econage.com/af-front-bit/UI-components-pc" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  UI组件仓库
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://gitlab.econage.com/af-front-bit/professional-components-pc" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  业务组件仓库
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://rap2.econage.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  接口仓库
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://npm.econage.com:4873" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  内部npm仓库
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/code-standards-doc/home/update.html" class="nav-link">首页</a></div><div class="nav-item"><a href="/code-standards-doc/name/" class="nav-link">命名规范</a></div><div class="nav-item"><a href="/code-standards-doc/code/" class="nav-link router-link-active">代码规范</a></div><div class="nav-item"><a href="/code-standards-doc/component/" class="nav-link">组件编写规范</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">仓库地址</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="http://gitlab.econage.com/af-front/AlphaFlow" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  alphaflow1.x
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://gitlab.econage.com/af-front/AlphaFlow-Mobile" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  alphaflow-mobile1.x
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://gitlab.econage.com/af-front-bit/AlphaFlow-pc-beta" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  alphaflow2.x-beta
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://gitlab.econage.com/af-front-bit/UI-components-pc" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  UI组件仓库
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://gitlab.econage.com/af-front-bit/professional-components-pc" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  业务组件仓库
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://rap2.econage.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  接口仓库
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="http://npm.econage.com:4873" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  内部npm仓库
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>代码规范</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/code-standards-doc/code/" class="sidebar-link">HTML</a></li><li><a href="/code-standards-doc/code/css.html" class="active sidebar-link">CSS</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/code-standards-doc/code/css.html#基本规范" class="sidebar-link">基本规范</a></li><li class="sidebar-sub-header"><a href="/code-standards-doc/code/css.html#其他杂项规范" class="sidebar-link">其他杂项规范</a></li><li class="sidebar-sub-header"><a href="/code-standards-doc/code/css.html#写在最后" class="sidebar-link">写在最后</a></li></ul></li><li><a href="/code-standards-doc/code/javascript.html" class="sidebar-link">JavaScript</a></li><li><a href="/code-standards-doc/code/ecmascript6.html" class="sidebar-link">ECMAScript 6</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="css"><a href="#css" aria-hidden="true" class="header-anchor">#</a> CSS</h1> <h2 id="基本规范"><a href="#基本规范" aria-hidden="true" class="header-anchor">#</a> 基本规范</h2> <h3 id="缩进"><a href="#缩进" aria-hidden="true" class="header-anchor">#</a> 缩进</h3> <p>使用<strong>soft tab</strong>（4个空格）。</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="分号"><a href="#分号" aria-hidden="true" class="header-anchor">#</a> 分号</h3> <p>每个属性声明末尾都要加分号。</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+
+    <span class="token property">background-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="空格"><a href="#空格" aria-hidden="true" class="header-anchor">#</a> 空格</h3> <p>以下几种情况不需要空格：</p> <ul><li>属性名后</li> <li>多个规则的分隔符<code>','</code>前</li> <li><code>!important</code> <code>'!'</code>后</li> <li>属性值中<code>'('</code>后和<code>')'</code>前</li> <li>行末不要有多余的空格</li></ul> <p>以下几种情况需要空格：</p> <ul><li>属性值前</li> <li>选择器<code>'&gt;'</code>, <code>'+'</code>, <code>'~'</code>前后</li> <li><code>'{'</code>前</li> <li><code>!important</code> <code>'!'</code>前</li> <li><code>@else</code> 前后</li> <li>属性值中的<code>','</code>后</li> <li>注释<code>'/*'</code>后和<code>'*/'</code>前</li></ul> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* not good */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span> <span class="token punctuation">:</span>red! important<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* good */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red <span class="token important">!important</span><span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> .5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* not good */</span>
+<span class="token selector">.element ,
+.dialog</span><span class="token punctuation">{</span>
+    ...
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* good */</span>
+<span class="token selector">.element,
+.dialog</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* not good */</span>
+<span class="token selector">.element&gt;.dialog</span><span class="token punctuation">{</span>
+    ...
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* good */</span>
+<span class="token selector">.element &gt; .dialog</span><span class="token punctuation">{</span>
+    ...
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* not good */</span>
+<span class="token selector">.element</span><span class="token punctuation">{</span>
+    ...
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* good */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    ...
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* not good */</span>
+<span class="token atrule"><span class="token rule">@if</span></span><span class="token punctuation">{</span>
+    ...
+<span class="token punctuation">}</span><span class="token atrule"><span class="token rule">@else</span></span><span class="token punctuation">{</span>
+    ...
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* good */</span>
+<span class="token atrule"><span class="token rule">@if</span></span> <span class="token punctuation">{</span>
+    ...
+<span class="token punctuation">}</span> <span class="token atrule"><span class="token rule">@else</span></span> <span class="token punctuation">{</span>
+    ...
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="空行"><a href="#空行" aria-hidden="true" class="header-anchor">#</a> 空行</h3> <p>以下几种情况需要空行：</p> <ul><li>文件最后保留一个空行</li> <li><code>'}'</code>后最好跟一个空行，包括<strong>scss</strong>中嵌套的规则</li> <li>属性之间需要适当的空行，具体见属性声明顺序</li></ul> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* not good */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    ...
+<span class="token punctuation">}</span>
+<span class="token selector">.dialog</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token selector">;
+    &amp;:after</span> <span class="token punctuation">{</span>
+        ...
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* good */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    ...
+<span class="token punctuation">}</span>
+
+<span class="token selector">.dialog</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token selector">;
+
+    &amp;:after</span> <span class="token punctuation">{</span>
+        ...
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="换行"><a href="#换行" aria-hidden="true" class="header-anchor">#</a> 换行</h3> <p>以下几种情况需要换行：</p> <ul><li><code>'{'</code>后和<code>'}'</code>前</li> <li>每个属性独占一行</li> <li>多个规则的分隔符<code>','</code>后</li></ul> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* not good */</span>
+<span class="token selector">.element</span>
+<span class="token punctuation">{</span><span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span> <span class="token property">background-color</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span><span class="token punctuation">}</span>
+
+<span class="token comment">/* good */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* not good */</span>
+<span class="token selector">.element, .dialog</span> <span class="token punctuation">{</span>
+    ...
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* good */</span>
+<span class="token selector">.element,
+.dialog</span> <span class="token punctuation">{</span>
+    ...
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="注释"><a href="#注释" aria-hidden="true" class="header-anchor">#</a> 注释</h3> <ul><li>注释统一用<code>'/__/'</code>（<strong>scss</strong>中也不要用<code>'//'</code>），具体参照底下的写法；</li> <li>缩进与下一行代码保持一致；</li> <li>可位于一个代码行的末尾，与代码间隔一个空格。</li></ul> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* Modal header */</span>
+<span class="token selector">.modal-header</span> <span class="token punctuation">{</span>
+    ...
+<span class="token punctuation">}</span>
+
+<span class="token comment">/*
+ * Modal header
+ */</span>
+<span class="token selector">.modal-header</span> <span class="token punctuation">{</span>
+    ...
+<span class="token punctuation">}</span>
+
+<span class="token selector">.modal-header</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 50px */</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span> <span class="token comment">/* color red */</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="引号"><a href="#引号" aria-hidden="true" class="header-anchor">#</a> 引号</h3> <ul><li>最外层统一使用<strong>双引号</strong>；</li> <li><strong>url</strong>的内容要用引号；</li> <li>属性选择器中的属性值需要引号。</li></ul> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element:after</span> <span class="token punctuation">{</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+    <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span>&quot;logo.png&quot;<span class="token punctuation">)</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">li[data-type=&quot;single&quot;]</span> <span class="token punctuation">{</span>
+    ...
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="颜色"><a href="#颜色" aria-hidden="true" class="header-anchor">#</a> 颜色</h3> <p>颜色<strong>16进制</strong>用小写字母；颜色<strong>16进制</strong>尽量用简写。</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* not good */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #ABCDEF<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> #001122<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* good */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> #abcdef<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> #012<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="属性简写"><a href="#属性简写" aria-hidden="true" class="header-anchor">#</a> 属性简写</h3> <p>属性简写需要你非常清楚属性值的正确顺序，而且在大多数情况下并不需要设置属性简写中包含的所有值，所以建议尽量分开声明会更加清晰；</p> <p><code>margin</code> 和 <code>padding</code> 相反，需要使用简写；</p> <ul><li>常见的属性简写包括：
+<ul><li>font</li> <li>background</li> <li>transition</li> <li>animation</li></ul></li></ul> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* not good */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">transition</span><span class="token punctuation">:</span> opacity 1s linear 2s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* good */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">transition-delay</span><span class="token punctuation">:</span> 2s<span class="token punctuation">;</span>
+    <span class="token property">transition-timing-function</span><span class="token punctuation">:</span> linear<span class="token punctuation">;</span>
+    <span class="token property">transition-duration</span><span class="token punctuation">:</span> 1s<span class="token punctuation">;</span>
+    <span class="token property">transition-property</span><span class="token punctuation">:</span> opacity<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="媒体查询"><a href="#媒体查询" aria-hidden="true" class="header-anchor">#</a> 媒体查询</h3> <p>尽量将媒体查询的规则靠近与他们相关的规则，不要将他们一起放到一个独立的样式文件中，或者丢在文档的最底部，这样做只会让大家以后更容易忘记他们。</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.element</span> <span class="token punctuation">{</span>
+    ...
+<span class="token punctuation">}</span>
+
+<span class="token selector">.element-avatar</span><span class="token punctuation">{</span>
+    ...
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 480px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector">.element</span> <span class="token punctuation">{</span>
+        ...
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.element-avatar</span> <span class="token punctuation">{</span>
+        ...
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="其他杂项规范"><a href="#其他杂项规范" aria-hidden="true" class="header-anchor">#</a> 其他杂项规范</h2> <ul><li>不允许有空的规则；</li> <li>元素选择器用小写字母；</li> <li>去掉小数点前面的0；</li> <li>去掉数字中不必要的小数点和末尾的0；</li> <li>属性值<code>'0'</code>后面不要加单位；</li> <li>同个属性不同前缀的写法需要在垂直方向保持对齐，具体参照右边的写法；</li> <li>无前缀的标准属性应该写在有前缀的属性后面；</li> <li>不要在同个规则里出现重复的属性，如果重复的属性是连续的则没关系；</li> <li>不要在一个文件里出现两个相同的规则；</li> <li>用 <code>border: 0;</code> 代替 <code>border: none;</code>；</li> <li>选择器不要超过4层（在<strong>scss</strong>中如果超过4层应该考虑用嵌套的方式来写）；</li> <li>发布的代码中不要有 <code>@import</code>；</li> <li>尽量少用<code>'*'</code>选择器。</li></ul> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* not good */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* not good */</span>
+<span class="token selector">LI</span> <span class="token punctuation">{</span>
+    ...
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* good */</span>
+<span class="token selector">li</span> <span class="token punctuation">{</span>
+    ...
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* not good */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* good */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> .5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* not good */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 50.0px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* good */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* not good */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 0px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* good */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* not good */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 3px<span class="token punctuation">;</span>
+    <span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> 3px<span class="token punctuation">;</span>
+    <span class="token property">-moz-border-radius</span><span class="token punctuation">:</span> 3px<span class="token punctuation">;</span>
+
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to bottom<span class="token punctuation">,</span> #fff 0<span class="token punctuation">,</span> #eee 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">-webkit-linear-gradient</span><span class="token punctuation">(</span>top<span class="token punctuation">,</span> #fff 0<span class="token punctuation">,</span> #eee 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">-moz-linear-gradient</span><span class="token punctuation">(</span>top<span class="token punctuation">,</span> #fff 0<span class="token punctuation">,</span> #eee 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* good */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> 3px<span class="token punctuation">;</span>
+       <span class="token property">-moz-border-radius</span><span class="token punctuation">:</span> 3px<span class="token punctuation">;</span>
+            <span class="token property">border-radius</span><span class="token punctuation">:</span> 3px<span class="token punctuation">;</span>
+
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">-webkit-linear-gradient</span><span class="token punctuation">(</span>top<span class="token punctuation">,</span> #fff 0<span class="token punctuation">,</span> #eee 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span>    <span class="token function">-moz-linear-gradient</span><span class="token punctuation">(</span>top<span class="token punctuation">,</span> #fff 0<span class="token punctuation">,</span> #eee 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span>         <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to bottom<span class="token punctuation">,</span> #fff 0<span class="token punctuation">,</span> #eee 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* not good */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> .5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* good */</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> .5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="写在最后"><a href="#写在最后" aria-hidden="true" class="header-anchor">#</a> 写在最后</h2> <h3 id="css代码格式化"><a href="#css代码格式化" aria-hidden="true" class="header-anchor">#</a> css代码格式化</h3> <p>css的代码格式化，能解决部分css代码规范，如代码缩进、空格、分号、换行、引号、颜色进制等。所以能解决的这些规范仅供参考。</p></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/code-standards-doc/code/" class="prev router-link-active">
+          HTML
+        </a></span> <span class="next"><a href="/code-standards-doc/code/javascript.html">
+          JavaScript
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/code-standards-doc/assets/js/app.e95fd164.js" defer></script><script src="/code-standards-doc/assets/js/5.0a479782.js" defer></script>
+  </body>
+</html>
